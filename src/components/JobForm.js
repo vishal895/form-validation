@@ -7,7 +7,7 @@ import * as yup from "yup"
 const App = (props) => {
 
   const defaultvalue = {
-    tittle: "",
+    title: "",
     description: "",
     minExperience: "",
     maxExperience: "",
@@ -20,7 +20,7 @@ const App = (props) => {
   }
 
   const validationSchema = yup.object().shape({
-    tittle: yup.string().required("please enter your tittle"),
+    title: yup.string().required("please enter your title"),
     description: yup.string().required("please enter your description"),
     minExperience: yup.string().required("please enter your experience"),
     maxExperience: yup.string().required("please enter your experience"),
@@ -61,13 +61,13 @@ const App = (props) => {
           >
             <Form>
               <div className="col-md-12 mt-4">
-                <h6>Job Tittle*</h6>
-                <Field component="select" name="tittle" placeholder="enter your tittle" className="form-control">
+                <h6>Job Title*</h6>
+                <Field component="select" name="title" placeholder="enter your title" className="form-control">
                   <option value="" disabled>select position</option>
-                  <option value="">Full Stack developer Updated</option>
+                  <option value="Full Stack developer Updated">Full Stack developer Updated</option>
                 </Field>
                 <p className="text-danger">
-                  <ErrorMessage name="tittle" />
+                  <ErrorMessage name="title" />
                 </p>
               </div>
               <div className="col-md-12 mt-4">
